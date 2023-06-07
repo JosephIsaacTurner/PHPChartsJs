@@ -21,7 +21,7 @@ Here's an example code snippet demonstrating the usage of PHPHistogram:
 
 ```
 // Include Chart.js
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+echo '<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>';
 
 // Include PHPHistogram library
 include_once('PHPHistogram.php');
