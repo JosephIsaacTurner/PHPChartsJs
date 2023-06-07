@@ -6,15 +6,15 @@ To use PHPHistogram, follow these steps:
 
 1) Ensure that Chart.js is included somewhere in your page using the following script tag:
 `<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>`
-Include the PHPHistogram library in your PHP page by adding the following line of code:
+2) Include the PHPHistogram library in your PHP page by adding the following line of code:
 `include_once('PHPHistogram.php');`
-2) Prepare the data you wish to visualize by creating an array of keyed arrays. If you are querying a MySQL database, you can conveniently generate this array using the `queryToArray($connection, $query)` function.
+3) Prepare the data you wish to visualize by creating an array of keyed arrays. If you are querying a MySQL database, you can conveniently generate this array using the `queryToArray($connection, $query)` function.
 
-3) Generate a histogram by calling the `generateHistogram($data, $columnName)` function, providing the data array and the desired field for plotting. This function will return an HTML string containing the generated histogram.
+4) Generate a histogram by calling the `generateHistogram($data, $columnName)` function, providing the data array and the desired field for plotting. This function will return an HTML string containing the generated histogram.
 
-4) If you want to generate multiple parallel histograms from the same data array, you can use the `generateMultiHistogram($data, $columnNames)` function. The `$columnNames` argument should be an array of the fields you want to plot.
+5) If you want to generate multiple parallel histograms from the same data array, you can use the `generateMultiHistogram($data, $columnNames)` function. The `$columnNames` argument should be an array of the fields you want to plot.
 
-5) To automatically generate histograms for all possible fields in the data array, pass the result of the `getColumnNames($data)` function as the `$columnNames` argument to the `generateMultiHistogram($data, $columnNames)` function.
+6) To automatically generate histograms for all possible fields in the data array, pass the result of the `getColumnNames($data)` function as the `$columnNames` argument to the `generateMultiHistogram($data, $columnNames)` function.
 
 ## Example
 Here's an example code snippet demonstrating the usage of PHPHistogram:
