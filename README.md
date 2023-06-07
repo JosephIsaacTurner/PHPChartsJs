@@ -1,5 +1,5 @@
 # PHPHistogram
-This contains a collection of functions that allow for autogenerating histograms for PHP pages. It uses PHP to generate Charts.Js histograms from arrays, usually from queries returned from a MySQL database.
+A collection of functions that allow for autogenerating histograms for PHP pages. It uses PHP to generate Charts.Js histograms from arrays, usually from queries returned from a MySQL database.
 
 Usage:
 1) Somewhere in the page, make sure you include Chart.JS (<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>)
