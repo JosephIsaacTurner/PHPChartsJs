@@ -35,7 +35,7 @@ $histogram = generateHistogram($data, 'your_field_name');
 echo $histogram;
 
 // Generate multiple histograms separate by html tab groups based on all fields in the data array:
-$histogram = generateMultiHistogram($data, getColumnNames($data));
-echo $histogram;
+$multiHistogram = generateMultiHistogram($data, getColumnNames($data));
+echo $multiHistogram;
 ```
 By following these simple steps, you can effortlessly generate dynamic histograms in PHP using PHPHistogram.
