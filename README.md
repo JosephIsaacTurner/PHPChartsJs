@@ -1,10 +1,37 @@
-# PHPHistogram
-A collection of functions that allow for autogenerating histograms for PHP pages. It uses PHP to generate Charts.Js histograms from arrays, usually from queries returned from a MySQL database.
+#PHPHistogram
+PHPHistogram is a comprehensive collection of functions that simplifies the process of generating histograms for PHP pages. It leverages PHP and Charts.js to create dynamic histograms from arrays, commonly obtained from queries returned by a MySQL database.
 
-Usage:
-1) Somewhere in the page, make sure you include Chart.JS (<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>)
-2) Include in your php page: include_once('PHPHistogram.php');
-3) Create an array of keyed arrays for the data you want to visualize (If you are querying a MySQL database, you can autogenerate this array using the queryToArray($connection, $query) function). 
-4) Call the function generateHistogram($data, $columnName), using the data array and the field you are interested in plotting. It returns an html string containing the histogram. 
-5) If you are interesting in generating multiple parallel histograms from the same data array, you can use the function generateMultiHistogram($data, $columnNames), where the $columnNames argument is the array of fields you are interested in plotting.
-6) If you want to autogenerate histograms based on all the possible fields in the data array, you can pass in an array from the getColumnNames($data) function, like so: generateMultiHistogram($data, getColumnNames($data));
+##Usage
+To use PHPHistogram, follow these steps:
+
+1) Ensure that Chart.js is included somewhere in your page using the following script tag:
+`<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>`
+Include the PHPHistogram library in your PHP page by adding the following line of code:
+`include_once('PHPHistogram.php');`
+2) Prepare the data you wish to visualize by creating an array of keyed arrays. If you are querying a MySQL database, you can conveniently generate this array using the `queryToArray($connection, $query)` function.
+
+3) Generate a histogram by calling the `generateHistogram($data, $columnName)` function, providing the data array and the desired field for plotting. This function will return an HTML string containing the generated histogram.
+
+4) If you want to generate multiple parallel histograms from the same data array, you can use the `generateMultiHistogram($data, $columnNames)` function. The `$columnNames` argument should be an array of the fields you want to plot.
+
+5) To automatically generate histograms for all possible fields in the data array, pass the result of the `getColumnNames($data)` function as the `$columnNames` argument to the `generateMultiHistogram($data, $columnNames)` function.
+
+Example
+Here's an example code snippet demonstrating the usage of PHPHistogram:
+
+```
+// Include Chart.js
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+// Include PHPHistogram library
+include_once('PHPHistogram.php');
+
+// Fetch data from MySQL database
+$query = "SELECT * FROM your_table";
+$data = queryToArray($connection, $query);
+
+// Generate a histogram for a specific field
+$histogram = generateHistogram($data, 'your_field_name');
+echo $histogram;
+```
+By following these simple steps, you can effortlessly generate dynamic histograms in PHP using PHPHistogram.
