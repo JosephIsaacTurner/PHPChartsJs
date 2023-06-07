@@ -1,7 +1,7 @@
-#PHPHistogram
+# PHPHistogram
 PHPHistogram is a comprehensive collection of functions that simplifies the process of generating histograms for PHP pages. It leverages PHP and Charts.js to create dynamic histograms from arrays, commonly obtained from queries returned by a MySQL database.
 
-##Usage
+## Usage
 To use PHPHistogram, follow these steps:
 
 1) Ensure that Chart.js is included somewhere in your page using the following script tag:
@@ -16,7 +16,7 @@ Include the PHPHistogram library in your PHP page by adding the following line o
 
 5) To automatically generate histograms for all possible fields in the data array, pass the result of the `getColumnNames($data)` function as the `$columnNames` argument to the `generateMultiHistogram($data, $columnNames)` function.
 
-Example
+## Example
 Here's an example code snippet demonstrating the usage of PHPHistogram:
 
 ```
