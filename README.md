@@ -19,7 +19,7 @@ To use PHPChartsJs, follow these steps:
 7) Make stacked bar charts using the `generateStackedBarChart($data, $x_key, $y_key, $stack_key)` function. `$x_key` is the array key for the fields to be plotted along the x axis. `$y_key` is the array key for the fields to be plotted along the y axis. `$stack_key` is the array key to separate values into stacks in the y dimension. Take a look at the Charts.Js documentation to see more: https://www.chartjs.org/docs/latest/samples/bar/stacked.html
 
 ## Example
-Here's an example code snippet demonstrating the usage of PHPHistogram:
+Here's an example code snippet demonstrating the usage of PHPChartsJs:
 
 ```
 // Include Chart.js
