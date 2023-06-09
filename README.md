@@ -41,4 +41,4 @@ echo $histogram;
 $multiHistogram = generateMultiHistogram($data, getColumnNames($data));
 echo $multiHistogram;
 ```
-By following these simple steps, you can effortlessly generate dynamic histograms in PHP using PHPHistogram.
+By following these simple steps, you can effortlessly generate dynamic histograms for webpages using PHPHistogram.
