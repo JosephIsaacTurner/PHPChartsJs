@@ -16,6 +16,8 @@ To use PHPChartsJs, follow these steps:
 
 6) To automatically generate histograms for all possible fields in the data array, pass the result of the `getColumnNames($data)` function as the `$columnNames` argument to the `generateMultiHistogram($data, $columnNames)` function.
 
+7) Make stacked bar charts using the `generateStackedBarChart($data, $x_key, $y_key, $stack_key)` function. `$x_key` is the array key for the fields to be plotted along the x axis. `$y_key` is the array key for the fields to be plotted along the y axis. `$stack_key` is the array key to separate values into stacks in the y dimension. Take a look at the Charts.Js documentation to see more: https://www.chartjs.org/docs/latest/samples/bar/stacked.html
+
 ## Example
 Here's an example code snippet demonstrating the usage of PHPHistogram:
 
@@ -40,5 +42,8 @@ echo $histogram;
 // Generate multiple histograms separate by html tab groups based on all fields in the data array:
 $multiHistogram = generateMultiHistogram($data, getColumnNames($data));
 echo $multiHistogram;
+
+$stackedBarChart = generateStackedBarChart($data, 'x_key', 'y_key', 'stack_key');
+echo $stackedBarChart; 
 ```
 By following these simple steps, you can effortlessly generate dynamic histograms for webpages using PHPHistogram.
