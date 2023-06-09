@@ -1,5 +1,5 @@
-# PHPCharts
-PHPHistogram is a comprehensive collection of functions that simplifies the process of generating histograms for web pages served through PHP. It leverages PHP and Charts.js to create dynamic histograms from arrays, commonly obtained from queries returned by a MySQL database.
+# PHPChartsJs
+PHPHistogram is a comprehensive collection of functions that simplifies the process of generating histograms/charts for web pages served through PHP. It leverages PHP and Charts.js to create dynamic histograms from arrays, commonly obtained from queries returned by a MySQL database.
 
 ## Usage
 To use PHPHistogram, follow these steps:
