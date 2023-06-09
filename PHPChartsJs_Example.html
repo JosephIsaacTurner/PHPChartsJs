@@ -1,0 +1,213 @@
+
+<!-- saved from url=(0082)https://staging-t.worldwideresources.com/wp-content/wwr-custom-code/php/charts.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>';
+    <style>
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }    
+    /* Style the buttons that are used to open the tab content */
+    .tab button {
+      width: auto !important;
+      padding: 12px 10px !important;
+      background-color: inherit;
+      float: left;
+      border: none !important;
+      border-radius: 0 !important;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+    
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+    
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+    </style>
+    <h3 style="margin-left: auto; margin-right: auto; width: 50%;">Multi Histogram:</h3><br>
+                    <div class="chartParent" style="width: 80%; margin: 0 auto;">
+                    <div class="tab"><button class="tablinks" onclick="openColumn(event, &quot;request_date&quot;)">request_date</button><button class="tablinks " onclick="openColumn(event, &quot;subject_state&quot;)">subject_state</button><button class="tablinks  active" onclick="openColumn(event, &quot;requester_company&quot;)">requester_company</button></div>
+                    <div id="request_date" class="tabcontent" style="display: none;">
+                            <div style="width: 80%; margin: 0 auto;">
+                    <canvas id="histogram-chart176" style="width: 1195px; height: 478px; display: block; box-sizing: border-box;" width="1195" height="478"></canvas>
+                </div>
+        <script>
+            const ctx176 = document.getElementById("histogram-chart176").getContext("2d");
+            new Chart(ctx176, {
+                type: "bar",
+                data: {
+                    labels: ["2023-05-05","2023-05-01","2023-05-11","2023-04-04","2023-06-01","2023-04-05","2023-04-12","2023-05-02","2023-06-06","2023-05-03","2023-04-20","2023-06-07","2023-04-26","2023-04-21","2023-06-08","2023-04-13","2023-05-08","2023-04-14","2023-05-19","2023-04-06","2023-05-26","2023-05-09","2023-04-18","2023-05-29","2023-04-19","2023-05-18","2023-06-09","2023-06-02","2023-05-16","2023-04-24","2023-05-15","2023-05-12","2023-04-11","2023-04-25","2023-04-27","2023-04-28","2023-05-04","2023-04-17","2023-04-10","2023-06-05","2023-04-07","2023-05-23","2023-03-31","2023-05-25","2023-05-31","2023-05-30","2023-05-17","2023-05-10","2023-05-24","2023-04-03","2023-05-06","2023-05-22"],
+                    datasets: [{
+                        label: "Count by request_date",
+                        data: [8,17,10,2,6,9,8,6,6,7,5,8,7,8,6,5,1,8,9,10,4,8,11,1,13,6,6,3,6,10,5,2,8,4,4,6,9,5,3,4,3,3,4,2,4,1,3,5,5,1,3,2],
+                        backgroundColor: ["#d6488380","#d6488380","#bb3f7c80","#bb3f7c80","#9f377580","#9f377580","#842e6d80","#842e6d80","#68266680","#68266680","#4d1d5f80","#4d1d5f80","#52296b80","#52296b80","#57367780","#57367780","#5c428480","#5c428480","#614f9080","#614f9080","#665b9c80","#665b9c80","#5e5f9980","#5e5f9980","#56649580","#56649580","#4e689280","#4e689280","#466d8e80","#466d8e80","#3e718b80","#3e718b80","#537e9280","#537e9280","#688b9980","#688b9980","#7e99a180","#7e99a180","#93a6a880","#93a6a880","#a8b3af80","#a8b3af80","#95adaa80","#95adaa80","#82a7a580","#82a7a580","#6ea0a180","#6ea0a180","#5b9a9c80","#5b9a9c80","#48949780","#48949780"],
+                        borderColor: "rgba(75, 192, 192, 1)",
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            precision: 0
+                        }
+                    }
+                }
+            });
+        </script>
+                        </div><div id="subject_state" class="tabcontent" style="display: none;">
+                            <div style="width: 80%; margin: 0 auto;">
+                    <canvas id="histogram-chart275" style="width: 1195px; height: 478px; display: block; box-sizing: border-box;" width="1195" height="478"></canvas>
+                </div>
+        <script>
+            const ctx275 = document.getElementById("histogram-chart275").getContext("2d");
+            new Chart(ctx275, {
+                type: "bar",
+                data: {
+                    labels: ["","Ciudad de Mexico ","SAO PAULO","TN","PA","SC","CA","NE","CDMX","BC","ON","Missouri","missouri","NY","NC","MO","CO","TX","FL","MS","NJ","PANGASINAN","IN","EDO STATE","GA","HI","IL","MI","CT","NEW TAIPEI","AL","MN","MEXICO D.F.","GR","MD","OK","VA","Ca","AK","on","FLORIDA","Texas","South Africa","AR","OR","KY","Tennessee","WI","AZ","NM","NARA","Arkansas","Mo","OH"],
+                    datasets: [{
+                        label: "Count by subject_state",
+                        data: [88,1,1,5,3,11,23,1,1,2,2,4,1,7,12,11,3,11,16,3,10,1,3,1,11,2,6,6,3,1,5,2,1,1,6,2,5,1,1,1,1,1,1,3,2,3,1,1,3,1,2,1,1,1],
+                        backgroundColor: ["#d6488380","#d6488380","#d6488380","#bb3f7c80","#bb3f7c80","#9f377580","#9f377580","#842e6d80","#842e6d80","#68266680","#68266680","#4d1d5f80","#4d1d5f80","#52296b80","#52296b80","#57367780","#57367780","#5c428480","#5c428480","#614f9080","#614f9080","#665b9c80","#665b9c80","#5e5f9980","#5e5f9980","#56649580","#56649580","#4e689280","#4e689280","#4e689280","#466d8e80","#466d8e80","#3e718b80","#3e718b80","#537e9280","#537e9280","#688b9980","#688b9980","#7e99a180","#7e99a180","#93a6a880","#93a6a880","#a8b3af80","#a8b3af80","#95adaa80","#95adaa80","#82a7a580","#82a7a580","#6ea0a180","#6ea0a180","#5b9a9c80","#5b9a9c80","#48949780","#48949780"],
+                        borderColor: "rgba(75, 192, 192, 1)",
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            precision: 0
+                        }
+                    }
+                }
+            });
+        </script>
+                        </div><div id="requester_company" class="tabcontent" style="display: block;">
+                            <div style="width: 80%; margin: 0 auto;">
+                    <canvas id="histogram-chart374" style="width: 1195px; height: 478px; display: block; box-sizing: border-box;" width="1195" height="478"></canvas>
+                </div>
+        <script>
+            const ctx374 = document.getElementById("histogram-chart374").getContext("2d");
+            new Chart(ctx374, {
+                type: "bar",
+                data: {
+                    labels: ["dummy_company1","dummy_company2","dummy_company3","dummy_company4","dummy_company5","dummy_company6","dummy_company7","dummy_company8","dummy_company9","dummy_company10","dummy_company11","dummy_company12","dummy_company13","dummy_company14","dummy_company15","dummy_company16","dummy_company17","dummy_company18","dummy_company19","dummy_company20","dummy_company21","dummy_company22","dummy_company23","dummy_company24","dummy_company25","dummy_company26","dummy_company27","dummy_company28","dummy_company29","dummy_company30","dummy_company31","dummy_company32","dummy_company33","dummy_company34","dummy_company35","dummy_company36","dummy_company37","dummy_company38","dummy_company39","dummy_company40","dummy_company41","dummy_company42","dummy_company43","dummy_company44","dummy_company45","dummy_company46","dummy_company47","dummy_company48","dummy_company49","dummy_company50","dummy_company51","dummy_company52","dummy_company53","dummy_company54","dummy_company55","dummy_company56","dummy_company57","dummy_company58","dummy_company59","dummy_company60","dummy_company61","dummy_company62","dummy_company63","dummy_company64","dummy_company65","dummy_company66","dummy_company67","dummy_company68","dummy_company69","dummy_company70","dummy_company71","dummy_company72","dummy_company73","dummy_company74","dummy_company75","dummy_company76","dummy_company77","dummy_company78","dummy_company79","dummy_company80","dummy_company81","dummy_company82","dummy_company83","dummy_company84","dummy_company85","dummy_company86","dummy_company87","dummy_company88","dummy_company89","dummy_company90","dummy_company91","dummy_company92","dummy_company93","dummy_company94","dummy_company95","dummy_company96","dummy_company97","dummy_company98"],
+                    datasets: [{
+                        label: "Count by requester_company",
+                        data: [24,15,12,10,10,9,8,8,7,7,7,7,7,6,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+                        backgroundColor: ["#d6488380","#d6488380","#d6488380","#d6488380","#bb3f7c80","#bb3f7c80","#bb3f7c80","#bb3f7c80","#9f377580","#9f377580","#9f377580","#9f377580","#842e6d80","#842e6d80","#842e6d80","#842e6d80","#68266680","#68266680","#68266680","#4d1d5f80","#4d1d5f80","#4d1d5f80","#4d1d5f80","#52296b80","#52296b80","#52296b80","#52296b80","#57367780","#57367780","#57367780","#57367780","#5c428480","#5c428480","#5c428480","#614f9080","#614f9080","#614f9080","#614f9080","#665b9c80","#665b9c80","#665b9c80","#665b9c80","#5e5f9980","#5e5f9980","#5e5f9980","#5e5f9980","#56649580","#56649580","#56649580","#4e689280","#4e689280","#4e689280","#4e689280","#466d8e80","#466d8e80","#466d8e80","#466d8e80","#3e718b80","#3e718b80","#3e718b80","#3e718b80","#537e9280","#537e9280","#537e9280","#537e9280","#688b9980","#688b9980","#688b9980","#7e99a180","#7e99a180","#7e99a180","#7e99a180","#93a6a880","#93a6a880","#93a6a880","#93a6a880","#a8b3af80","#a8b3af80","#a8b3af80","#a8b3af80","#95adaa80","#95adaa80","#95adaa80","#82a7a580","#82a7a580","#82a7a580","#82a7a580","#6ea0a180","#6ea0a180","#6ea0a180","#6ea0a180","#5b9a9c80","#5b9a9c80","#5b9a9c80","#5b9a9c80","#48949780","#48949780","#48949780"],
+                        borderColor: "rgba(75, 192, 192, 1)",
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            precision: 0
+                        }
+                    }
+                }
+            });
+        </script>
+                        </div>
+                    </div>
+                    
+    <script>
+        function openColumn(evt, columnName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(columnName).style.display = "block";
+        evt.currentTarget.className += " active";
+        }
+    </script>
+    <br><br><h3 style="margin-left: auto; margin-right: auto; width: 50%;">Stacked Bar Chart with Customized Tooltips:</h3><br>
+        <div class="chartParent" style="width: 80%; margin: 0 auto;">
+        <canvas id="stackedBar176" width="1522" height="761" style="display: block; box-sizing: border-box; height: 761px; width: 1522px;"></canvas>
+        </div>
+        <script>
+        var ctx = document.getElementById("stackedBar176").getContext("2d");
+        new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["2023-05-01","2023-05-02","2023-05-03","2023-05-04","2023-05-05","2023-05-06","2023-05-08","2023-05-09","2023-05-10","2023-05-11","2023-05-12","2023-05-15","2023-05-16","2023-05-17","2023-05-18","2023-05-19","2023-05-22","2023-05-23","2023-05-24","2023-05-25","2023-05-26","2023-05-29","2023-05-30","2023-05-31","2023-06-01","2023-06-02","2023-06-05","2023-06-06","2023-06-07","2023-06-08","2023-06-09"],
+                datasets: [{"label":"dummy_company1","data":["4",0,"1","2",0,0,0,0,0,0,0,0,0,0,"1","3","1",0,0,0,0,0,0,0,"1",0,0,"1","1","2","1"],"backgroundColor":"#d6488380"},{"label":"dummy_company2","data":["1",0,"1",0,0,0,0,"1",0,0,0,0,0,0,"2",0,0,"2",0,0,0,0,0,0,0,"1",0,"1","3","1","4"],"backgroundColor":"#bb3f7c80"},{"label":"dummy_company3","data":[0,0,0,0,"2",0,0,"1",0,0,"1",0,0,0,"1",0,0,"1","2",0,0,0,0,0,0,0,0,"3","1",0,0],"backgroundColor":"#9f377580"},{"label":"dummy_company4","data":[0,"2",0,"1",0,0,"1",0,0,0,0,"2",0,0,"2","4",0,0,0,0,0,0,0,0,0,0,0,0,"1",0,0],"backgroundColor":"#842e6d80"},{"label":"dummy_company5","data":[0,0,0,0,"2","1",0,0,0,"1",0,0,0,"2",0,0,0,0,0,"1",0,"1",0,0,0,0,0,0,"1",0,0],"backgroundColor":"#68266680"},{"label":"dummy_company6","data":[0,0,0,"1",0,0,0,0,0,0,0,0,"4",0,0,0,0,0,0,0,"1",0,0,"1",0,0,"1","1",0,0,0],"backgroundColor":"#52296b80"},{"label":"dummy_company7","data":[0,"1","1",0,0,"2",0,0,"1",0,0,"3",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"backgroundColor":"#57367780"},{"label":"dummy_company8","data":[0,"1",0,0,0,0,0,0,0,0,"1",0,0,0,0,"2",0,0,"2",0,0,0,0,"1",0,0,0,0,0,0,0],"backgroundColor":"#5c428480"},{"label":"dummy_company9","data":["1",0,0,0,0,0,0,"4","1","2",0,0,"2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"backgroundColor":"#614f9080"},{"label":"dummy_company10","data":[0,0,0,0,0,0,0,"1",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"1",0,"2",0,0,0,0],"backgroundColor":"#5e5f9980"},{"label":"dummy_company11","data":[0,0,0,0,"2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"1",0,0,0,"3",0],"backgroundColor":"#56649580"},{"label":"dummy_company12","data":[0,0,0,"4",0,0,0,0,"3",0,0,0,0,0,0,0,0,0,0,0,"1",0,0,0,0,0,0,0,0,0,0],"backgroundColor":"#4e689280"},{"label":"dummy_company13","data":[0,"1",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"1",0,0,0,0,0,0,"1"],"backgroundColor":"#466d8e80"},{"label":"dummy_company14","data":["1",0,0,0,0,0,0,0,0,"6",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"backgroundColor":"#537e9280"},{"label":"dummy_company15","data":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"1","1",0,0,0,0,0,0,0,0,0,0,0],"backgroundColor":"#688b9980"},{"label":"dummy_company16","data":[0,"1",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"1",0,0,0,0],"backgroundColor":"#7e99a180"},{"label":"dummy_company17","data":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"1","1",0,0,0,0,0],"backgroundColor":"#93a6a880"},{"label":"dummy_company18","data":[0,0,"3",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"1",0,0,0,0,0,0],"backgroundColor":"#95adaa80"},{"label":"dummy_company19","data":[0,0,0,0,0,0,0,0,0,0,0,0,0,"1",0,0,0,0,0,0,0,0,0,"1",0,0,0,0,0,0,0],"backgroundColor":"#82a7a580"},{"label":"dummy_company20","data":["7",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"1",0,0,0,0,0,0,0,0],"backgroundColor":"#6ea0a180"},{"label":"dummy_company21","data":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"2",0,0,0,0,0,0,0,0,0,0],"backgroundColor":"#5b9a9c80"}]
+            },
+            options: {
+                scales: {
+                    x: {
+                        stacked: true,
+                    },
+                    y: {
+                        beginAtZero: true,
+                        stacked: true
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                var label = context.dataset.label || "";
+
+                                if (label) {
+                                    label += ": ";
+                                }
+
+                                if (context.parsed.y !== null) {
+                                    label += context.parsed.y;
+                                }
+
+                                var total = 0;
+                                for (var i = 0; i < context.dataset.data.length; i++) {
+                                    total += Number(context.dataset.data[i]);
+                                }
+
+                                label += " (Total: " + total + ")";
+                                return label;
+                            },
+                            footer: function(tooltipItems) {
+                                let sum = 0;
+                                
+                                // Retrieve original chart data
+                                var data = tooltipItems[0].chart.data;
+
+                                // Calculate sum for all stacks of this bar
+                                data.datasets.forEach((dataset) => {
+                                    sum += Number(dataset.data[tooltipItems[0].dataIndex]) || 0;
+                                });
+
+                                return "Total: " + sum;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        </script>
+    </body></html>
