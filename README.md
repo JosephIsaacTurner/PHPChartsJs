@@ -8,7 +8,7 @@ To use PHPChartsJs, follow these steps:
 `<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>`
 2) Include the PHPChartsJs library in your PHP page by adding the following line of code:
 `include_once('PHPCharts.php');`
-3) Prepare the data you wish to visualize by creating an array of keyed arrays (basically a JSON). If you are querying a MySQL database, you can conveniently generate this array using the `queryToArray($connection, $query)` function.
+3) Prepare the data you wish to visualize by creating an array of keyed arrays (basically a JSON). If you are querying a MySQL database, you can conveniently generate this array using the `queryToArray($connection, $query)` function, or the native mysqli_fetch_all($result, MYSQLI_ASSOC) function.
 
 4) Generate a histogram by calling the `generateHistogram($data, $columnName)` function, providing the data array and the desired field for plotting. This function will return an HTML string containing the generated histogram.
 
