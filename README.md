@@ -26,6 +26,9 @@ echo '<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>';
 // Include PHPHistogram library
 include_once('PHPCharts.php');
 
+// Establish database connection
+$connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);   
+
 // Fetch data from MySQL database
 $query = "SELECT * FROM your_table";
 $data = queryToArray($connection, $query);
